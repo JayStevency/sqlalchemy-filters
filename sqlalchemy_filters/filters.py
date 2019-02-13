@@ -44,6 +44,7 @@ class Operator(object):
         'ilike': lambda f, a: f.ilike(a),
         'in': lambda f, a: f.in_(a),
         'not_in': lambda f, a: ~f.in_(a),
+        'contains': lambda f, a: f.contains(a)
     }
 
     def __init__(self, operator=None):
